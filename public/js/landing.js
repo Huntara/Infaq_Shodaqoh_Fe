@@ -15,13 +15,16 @@ document.addEventListener('click', function(e) {
     }
 })
 
-var typing = new Typed ('.typing', {
-    strings : [
-        "di Infak Wikrama",
-        "Semoga amal baikmu diterima oleh Allah",
-        "Ya Ahlil Jannah",
-    ], 
-    typeSpeed: 300,
-    backSpeed: 50,
-    loop: true,
+// parallax effects
+$(window).scroll(function () {
+    var wScroll = $(this).scrollTop();
+
+    // about
+    if (wScroll > $('.parallax-about').offset().top - 350) {
+        $('.parallax-about').each(function (i) {
+          setTimeout(function () {
+            $('.parallax-about').eq(i).addClass('muncul');
+          }, 500 * (i + 1));
+        })
+    };
 })

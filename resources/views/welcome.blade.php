@@ -28,9 +28,9 @@
             <div class="nav-menu" id="nav">
                 <div class="link-nav">
                     <a href="#home" class="nav-item">Home</a>
-                    <a href="#" class="nav-item">About us</a>
-                    <a href="#" class="nav-item">Testimony</a>
-                    <a href="#" class="nav-item">Contact</a>
+                    <a href="#about" class="nav-item">About us</a>
+                    <a href="#testimoni" class="nav-item">Best Seller</a>
+                    <a href="#contact" class="nav-item">Contact</a>
                     <a href="#" class="btn-login">Sign in</a>
                 </div>
             </div>
@@ -46,7 +46,12 @@
 
 
     {{-- hero section --}}
-    <section class="hero" id="home" data-paroller-factor="0.5" data-paroller-factor-xs="0.2">
+    <section 
+      class="hero" 
+      id="home" 
+      data-paroller-factor="0.5" 
+      data-paroller-factor-xs="0.2"
+    >
         <div class="image-parallax">
             <div class="text">Selamat datang, <span class="typing"></span></div>
             <p class="p-hero">
@@ -61,12 +66,31 @@
 
 
     {{-- section about --}}
-    
+    <section class="about" id="about">
+      <div class="main">
+        <div class="col parallax-about satu">
+          <img 
+            src="{{asset('image/image-about.jpg')}}" 
+            alt="image about"
+            class="image-about"  
+          >
+        </div>
+        <div class="col parallax-about dua">
+          <h1 class="title-main">About us</h1>
+          <p class="p-about">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis facere voluptatibus aliquid? Nulla, natus quasi! Ab quidem a accusantium repudiandae similique vel id, sed quo nulla perspiciatis eum odio maxime neque voluptate recusandae ut unde repellendus earum? Adipisci, quaerat tenetur sit eligendi beatae ipsum ipsam ad repellendus iste, eaque asperiores.
+          </p>
+        </div>
+      </div>
+    </section>
     {{-- end section about --}}
 
 
     {{-- jquery --}}
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+
+    {{-- main jquery --}}
+    <script src="{{asset('js/jquery-3.7.1.min.js')}}"></script>
 
     {{-- paroller js --}}
     <script src="{{ asset('js/jquery.paroller.js') }}"></script>
