@@ -15,10 +15,13 @@ use App\Http\Controllers\InfaqController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+Route::get('/index', function () {
+    return view('payment.index');
+});
+Route::get('/form', function () {
+    return view('payment.form');
+});
 Route::get('riwayat', [InfaqController::class, 'riwayat']);
 Route::get('tagihan', [InfaqController::class, 'tagihan']);
 Route::get('payment', [InfaqController::class, 'payment']);
