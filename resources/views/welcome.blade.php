@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Zakat Wikrama | Landing Page</title>
+    <title>Infak Wikrama | Landing Page</title>
     {{-- my css --}}
     <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
 
     <!-- font family -->
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,100;1,200;1,300;1,400;1,700&display=swap"
-        rel="stylesheet" 
-    />
+        rel="stylesheet" />
 
     {{-- icon web --}}
     <link rel="icon website" type="icon" href="{{ asset('image/icon-web.jpg') }}">
+
+    {{-- bootstrap icon --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -24,13 +26,14 @@
     <!-- navbar -->
     <nav>
         <div class="container-navbar">
-            <a href="#" class="navbar nav-title">Zakat <span class="span-nav-title">Wikrama</span></a>
+            <div class="nav-title-nav">
+                <img src="{{ asset('image/icon-web.jpg') }}" width="30" alt="">
+                <a href="#" class="navbar nav-title">Infak <span class="span-nav-title">Wikrama</span></a>
+            </div>
             <div class="nav-menu" id="nav">
                 <div class="link-nav">
                     <a href="#home" class="nav-item">Home</a>
-                    <a href="#about" class="nav-item">About us</a>
-                    <a href="#testimoni" class="nav-item">Best Seller</a>
-                    <a href="#contact" class="nav-item">Contact</a>
+                    <a href="#about" class="nav-item">Tentang Infak</a>
                     <a href="#" class="btn-login">Sign in</a>
                 </div>
             </div>
@@ -46,12 +49,7 @@
 
 
     {{-- hero section --}}
-    <section 
-      class="hero" 
-      id="home" 
-      data-paroller-factor="0.5" 
-      data-paroller-factor-xs="0.2"
-    >
+    <section class="hero" id="home" data-paroller-factor="0.5" data-paroller-factor-xs="0.2">
         <div class="image-parallax">
             <div class="text">Selamat datang, <span class="typing"></span></div>
             <p class="p-hero">
@@ -67,30 +65,107 @@
 
     {{-- section about --}}
     <section class="about" id="about">
-      <div class="main">
-        <div class="col parallax-about satu">
-          <img 
-            src="{{asset('image/image-about.jpg')}}" 
-            alt="image about"
-            class="image-about"  
-          >
+        <div class="main">
+            <div class="col parallax-about satu">
+                <img src="{{ asset('image/image-about.jpg') }}" alt="image about" class="image-about">
+            </div>
+            <div class="col parallax-about dua">
+                <h1 class="title-main">APA ITU INFAK?</h1>
+                <p class="p-about">
+                    Infak adalah salah satu konsep dalam Islam yang sering kali disalahartikan dengan zakat, meskipun
+                    keduanya memiliki perbedaan. Infak berasal dari kata "anfaqa" dalam bahasa Arab yang berarti
+                    "mengeluarkan" atau "menghabiskan harta". Secara umum, infak merujuk pada tindakan memberikan
+                    sumbangan atau kontribusi secara sukarela dari harta seseorang untuk kepentingan sosial,
+                    kemanusiaan, atau keagamaan tanpa adanya kewajiban syariat seperti dalam zakat.
+                    <br><br>
+                    Berikut adalah beberapa dalil tentang infak dalam bahasa Arab dari Al-Qur'an dan Hadis:
+                    <br><br>
+                    Surah Al-Baqarah (2:261):
+                    <br><br>
+                    يَا أَيُّهَا الَّذِينَ آمَنُوا أَنفِقُوا مِن مَّا رَزَقْنَاكُم مِّن قَبْلِ أَن يَأْتِيَ يَوْمٌ لَّا
+                    بَيْعٌ فِيهِ وَلَا خُلَّةٌ وَلَا شَفَاعَةٌ ۗ وَالْكَافِرُونَ هُمُ الظَّالِمُونَ
+                    Artinya:
+                    <br><br>
+                    "Perumpamaan orang-orang yang menafkahkan hartanya di jalan Allah adalah serupa dengan sebutir benih
+                    yang menumbuhkan tujuh bulir, pada tiap-tiap bulir seratus biji. Allah melipat gandakan (ganjaran)
+                    bagi siapa yang Dia kehendaki. Dan Allah Maha Luas (karunia-Nya) lagi Maha Mengetahui."
+                    <br><br>
+                </p>
+                <a href="#" class="btn-about">Infak Sekarang</a>
+            </div>
         </div>
-        <div class="col parallax-about dua">
-          <h1 class="title-main">About us</h1>
-          <p class="p-about">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis facere voluptatibus aliquid? Nulla, natus quasi! Ab quidem a accusantium repudiandae similique vel id, sed quo nulla perspiciatis eum odio maxime neque voluptate recusandae ut unde repellendus earum? Adipisci, quaerat tenetur sit eligendi beatae ipsum ipsam ad repellendus iste, eaque asperiores.
-          </p>
+
+        {{--  --}}
+
+        <div class="main dua">
+            <div class="col parallax-about-dua dua main">
+                <h1 class="title-main">APA KEUNTUNGAN DARI INFAK?</h1>
+                <p class="p-about">
+                    Infak memiliki banyak keuntungan, baik secara spiritual maupun dunia. Berikut adalah beberapa di
+                    antaranya:
+                    <br><br>
+                    1. <span class="title-bold">Meningkatkan Kepedulian Sosial</span>: Dengan berinfak, seseorang
+                    menunjukkan kepeduliannya terhadap sesama, terutama kepada mereka yang membutuhkan. Hal ini membantu
+                    memperkuat ikatan sosial dalam masyarakat dan meningkatkan solidaritas antar individu.
+                    <br><br>
+                    2. <span class="title-bold">Pembersihan Harta</span>: Infak membantu membersihkan harta seseorang
+                    dari sifat serakah dan cinta dunia yang berlebihan. Dengan memberikan sebagian dari harta kepada
+                    yang membutuhkan, seseorang belajar untuk tidak terlalu terikat pada harta benda duniawi.
+                    <br><br>
+                    3. <span class="title-bold">Mendekatkan Diri kepada Allah</span>: Infak merupakan salah satu bentuk
+                    ibadah yang sangat dianjurkan dalam Islam. Dengan berinfak, seseorang menunjukkan ketaatan dan
+                    kepatuhannya kepada Allah SWT, sehingga dapat meningkatkan kecintaan dan ketakwaannya kepada-Nya.
+                </p>
+                <a href="#" class="btn-about">Infak Sekarang</a>
+            </div>
+            <div class="col parallax-about-dua satu">
+                <img src="{{ asset('image/image-about-dua.jpg') }}" alt="image about" class="image-about">
+            </div>
         </div>
-      </div>
     </section>
     {{-- end section about --}}
+
+
+    {{-- footer --}}
+    <footer>
+        <div class="col-footer satu">
+            <div class="content">
+                <img src="{{ asset('image/icon-web.jpg') }}" class="img-footer" alt="">
+                <p>INFAK WIKRAMA</p>
+                <p>
+                    Jl. Raya Wangun, RT.01/RW.06, Sindangsari, Kec. Bogor Tim., Kota Bogor, Jawa Barat 16146
+                </p>
+                <div class="socials">
+                    <a href="https://www.instagram.com/smkwikrama/">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/smkwikrama">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@smkwikrama">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-footer dua">
+            <h1>Kontak</h1>
+            <p class="p-footer"><i class="bi bi-telephone-fill"></i>(0251) 8242411</p>
+        </div>
+        <div class="col-footer tiga">
+            <h1>Quick Link</h1>
+            <a href="#home" class="nav-item p-footer">Home</a>
+            <a href="#about" class="nav-item p-footer">Tentang Infak</a>
+        </div>
+    </footer>
+    {{-- end footer --}}
 
 
     {{-- jquery --}}
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
 
     {{-- main jquery --}}
-    <script src="{{asset('js/jquery-3.7.1.min.js')}}"></script>
+    <script src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
 
     {{-- paroller js --}}
     <script src="{{ asset('js/jquery.paroller.js') }}"></script>
