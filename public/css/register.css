@@ -20,16 +20,22 @@ body {
 }
 
 .col.satu {
+    flex: 1.5;
+}
+
+.col.satu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #fff;
-    background-image: url('/image/image-hero.jpg');
+    text-shadow: 0 0 5px #000;
+    background-image: url('/image/image-register.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    object-fit: cover;
 }
 
 .col.dua {
@@ -51,7 +57,8 @@ form {
 
 .form-control {
     display: block;
-    width: 300px;
+    width: 100%;
+    min-width: 300px;
     height: 35px;
     border: 1px solid #000;
     outline: none;
@@ -97,7 +104,6 @@ form {
     margin: 10px 0;
     cursor: pointer;
 }
-
 
 a {
     color: rgb(10, 69, 178);
