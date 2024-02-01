@@ -46,7 +46,7 @@
 	        	
 	        	<ul>
 		          <li>
-		            <a href="#">
+		            <a href="/dahboard">
 		              <span class="icon">
 		              	<i class="fas fa-border-all"></i></span>
 		              <span class="list">Dashboard</span>

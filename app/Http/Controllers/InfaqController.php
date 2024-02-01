@@ -20,4 +20,9 @@ class InfaqController extends Controller
     {
         return view('Payment');
     }
+
+    public function dashboard()
+    {
+        return view('Dashboard');
+    }
 }

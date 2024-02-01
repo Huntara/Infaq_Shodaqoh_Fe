@@ -22,6 +22,6 @@ Route::get('/', function () {
 Route::get('riwayat', [InfaqController::class, 'riwayat']);
 Route::get('tagihan', [InfaqController::class, 'tagihan']);
 Route::get('payment', [InfaqController::class, 'payment']);
-Route::get('Dahboard', [InfaqController::class, 'dashboard']);
+Route::get('dahboard', [InfaqController::class, 'dashboard']);
 
 
