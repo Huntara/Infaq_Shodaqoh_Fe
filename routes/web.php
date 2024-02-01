@@ -23,5 +23,7 @@ Route::get('riwayat', [InfaqController::class, 'riwayat']);
 Route::get('tagihan', [InfaqController::class, 'tagihan']);
 Route::get('payment', [InfaqController::class, 'payment']);
 Route::get('dashboard', [InfaqController::class, 'dashboard']);
+Route::get('login', [InfaqController::class, 'login']);
+Route::get('register', [InfaqController::class, 'register']);
 
 

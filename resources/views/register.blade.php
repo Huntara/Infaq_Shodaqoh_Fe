@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CineBar | Login</title>
+    <title>CineBar | Register</title>
 
     <!-- my css -->
-    <link rel="stylesheet" href="{{asset('css/login.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/register.css')}}" />
 
     <!-- font family -->
     <link
@@ -23,23 +23,25 @@
 
   <body>
     <div class="container">
-      <div class="col satu">
-        <h1>Welcome Back!</h1>
-        <p>
-          Selamat datang kembali user! <br />
-          Lorem, ipsum dolor sit amet consectetur adipisicing. <br />
-          Lorem, ipsum.
-        </p>
-      </div>
       <div class="col dua">
-        <h1 class="title">Login</h1>
+        <h1 class="title">Register</h1>
         <form action="">
           <div class="form-input">
-            <label for="email">Enter your email</label>
+            <label for="email">Email</label>
             <input
               type="email"
               name="email"
               id="email"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-input">
+            <label for="email">Username</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
               class="form-control"
               required
             />
@@ -54,17 +56,33 @@
               required
             />
           </div>
-          <button class="btn-login">Login</button>
+          <div class="form-input">
+            <label for="password">Confirm password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form-control"
+              required
+            />
+          </div>
+          <button class="btn-login">Join Us</button>
           <div class="help">
             <div class="link">
-              <p>Doesn't have account? <a href="../register/register.html">Register here</a></p>
-              <a href="#">Forgot your password?</a>
+              <p>Have account? <a href="../login/login.html">Login here</a></p>
             </div>
           </div>
         </form>
+        <!-- <p>&copy; Elang Atha Zahran - 2024</p> -->
+      </div>
+      <div class="col satu">
+        <h1>Join us!</h1>
+        <p>
+          Lorem ipsum dolor sit amet. <br> Lorem ipsum dolor sit amet consectetur.
+        </p>
       </div>
     </div>
 
-    <script src="login.js"></script>
+    <script src="register.js"></script>
   </body>
 </html>
