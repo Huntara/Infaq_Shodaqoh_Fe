@@ -3,14 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD
-    <title>CineBar | Register</title>
-=======
+
     <title>Register Wikrama | Register</title>
 
     {{-- icon web --}}
     <link rel="icon website" type="icon" href="{{ asset('image/icon-web.jpg') }}">
->>>>>>> e367d7d34138372d4a6c0dc526d9665b677fa5c3
 
     <!-- my css -->
     <link rel="stylesheet" href="{{asset('css/register.css')}}" />
