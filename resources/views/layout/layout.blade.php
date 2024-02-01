@@ -46,7 +46,7 @@
 	        	
 	        	<ul>
 		          <li>
-		            <a href="/dahboard">
+		            <a href="/dahboard"  @if (request()->route()->uri == 'dahboard') class='active' @endif>
 		              <span class="icon">
 		              	<i class="fas fa-border-all"></i></span>
 		              <span class="list">Dashboard</span>
