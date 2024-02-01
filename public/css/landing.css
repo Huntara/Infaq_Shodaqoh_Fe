@@ -14,6 +14,12 @@ a {
     color: #000;
 }
 
+i {
+    font-size: 2em;
+    margin: 200px 10px;
+    color: rgb(121, 248, 121);
+}
+
 body {
     font-family: 'poppins', sans-serif;
     min-height: 2000px;
@@ -26,7 +32,9 @@ nav {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     border: 1px solid  rgba(0, 0, 0, .15);
-    width: 100%;
+    width: 90%;
+    left: 5%;
+    top: 5%;
     position: fixed;
     z-index: 1000;
 }
@@ -220,6 +228,14 @@ section.about {
     color: #323232;
 }
 
+.btn-about {
+    padding: 10px 30px;
+    background-color: var(--color-primary);
+    color: #fff;
+    border-radius: 3px;
+    margin: 20px 0;
+}
+
 .col {
     flex: 1;
 }
@@ -249,9 +265,58 @@ section.about {
     opacity: 1;
     transform: translateY(0);
 }
+.parallax-about-dua {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: 2s;
+}
+
+.parallax-about-dua.muncul {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* end about */
 
 
-/* endabout */
+
+
+/* footer */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    margin-top: 100px;
+    background-color: #f2f2f2;
+}
+
+.col-footer {
+    flex: 1;
+}
+
+.col-footer.satu {
+    flex: 2;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.col-footer.dua {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col-footer.tiga {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-footer {
+    width: 100%;
+    max-width: 170px;
+}
 
 
 
@@ -270,15 +335,22 @@ section.about {
         position: absolute;
         display: flex;
         flex-direction: column;
-        top: 100%;
-        right: -100%;
-        width: 30%;
-        height: 100vh;
-        background-color: #e3e3e3;
+        top: 110%;
+        border-radius: 10px;
+        left: 0;
+        width: 100%;
+        height: max-content;
+        padding: 10px 0;
+        background-color: #f4f4f4;
+        transform: translateY(-200px);
+        opacity: 0;
+        display: none;
         transition: all .3s ease;
     }
     .nav-menu.active {
-        right: 0;
+        display: flex;
+        transform: translateY(0px);   
+        opacity: 1;
     }
 
     .nav-item {
