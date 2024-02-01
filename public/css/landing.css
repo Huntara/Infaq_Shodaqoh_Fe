@@ -31,7 +31,7 @@ body {
 nav {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    border: 1px solid  rgba(0, 0, 0, .15);
+    border: 1px solid rgba(0, 0, 0, .15);
     width: 90%;
     left: 5%;
     top: 5%;
@@ -123,6 +123,7 @@ nav {
 .hamburger {
     display: none;
 }
+
 /* end navbar */
 
 
@@ -183,6 +184,7 @@ nav {
     margin: auto;
     width: max-content;
 }
+
 /* end hero */
 
 
@@ -197,6 +199,7 @@ section.about {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    margin: 30px 0;
 }
 
 .title-main {
@@ -265,6 +268,7 @@ section.about {
     opacity: 1;
     transform: translateY(0);
 }
+
 .parallax-about-dua {
     opacity: 0;
     transform: translateY(200px);
@@ -275,6 +279,7 @@ section.about {
     opacity: 1;
     transform: translateY(0);
 }
+
 /* end about */
 
 
@@ -283,18 +288,27 @@ section.about {
 /* footer */
 footer {
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 30px 0;
     margin-top: 100px;
     background-color: #f2f2f2;
 }
 
+.col-footer.satu .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+
 .col-footer {
-    flex: 1;
+    /* flex: 1; */
+    width: 300px;
+    margin: 30px 0;
 }
 
 .col-footer.satu {
-    flex: 2;
+    flex: 1;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -347,9 +361,10 @@ footer {
         display: none;
         transition: all .3s ease;
     }
+
     .nav-menu.active {
         display: flex;
-        transform: translateY(0px);   
+        transform: translateY(0px);
         opacity: 1;
     }
 
@@ -358,7 +373,7 @@ footer {
         margin: 15px 0;
     }
 
-    .link-nav{
+    .link-nav {
         flex-direction: column;
         text-align: center;
     }
@@ -418,7 +433,19 @@ footer {
     .main {
         flex-wrap: wrap;
     }
+
     .col {
         flex-wrap: wrap;
     }
+}
+
+@media screen and (max-width: 415px) {
+    .col-footer.satu .content {
+        text-align: center;
+    }
+
+    .img-footer {
+        margin: auto;
+    }
+
 }
