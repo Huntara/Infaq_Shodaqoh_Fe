@@ -25,12 +25,4 @@ class InfaqController extends Controller
     {
         return view('Dashboard');
     }
-
-    public function login () {
-        return view('login');
-    }
-
-    public function register () {
-        return view('register');
-    } 
 }

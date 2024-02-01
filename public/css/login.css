@@ -5,10 +5,6 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: .8em;
-}
-
 body {
     font-family: 'poppins', Arial, Helvetica, sans-serif;
 }
@@ -28,16 +24,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1.5;
     text-align: center;
     color: #fff;
-    text-shadow: 0 0 10px 0 #000;
     background-image: url('/image/image-hero.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    backdrop-filter: brightness(0);
-    z-index: 2;
 }
 
 .col.dua {
@@ -59,7 +51,7 @@ form {
 
 .form-control {
     display: block;
-    width: 100%;
+    width: 300px;
     height: 35px;
     border: 1px solid #000;
     outline: none;
