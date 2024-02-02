@@ -15,11 +15,11 @@
 
 	<div class="top_navbar">
 		<div class="logo">
-			<a href="#">Infaq Wikrama</a>
+			<a href="#" style="text-decoration: none">Infaq Wikrama</a>
 		</div>
 		<div class="top_menu">
 			<div class="home_link">
-				<a href="#">
+				<a href="#" style="text-decoration: none">
 					<span class="icon"><i class="fas fa-home"></i></span>
 					<span>Home</span>
 				</a>
@@ -46,7 +46,7 @@
 	        	
 	        	<ul>
 		          <li>
-		            <a href="/dahboard"  @if (request()->route()->uri == 'dahboard') class='active' @endif>
+		            <a href="/dashboard"  @if (request()->route()->uri == 'dashboard') class='active' @endif>
 		              <span class="icon">
 		              	<i class="fas fa-border-all"></i></span>
 		              <span class="list">Dashboard</span>
@@ -71,7 +71,7 @@
 		            </a>
 		          </li>
 		          <li>
-		            <a href="#">
+		            <a href="/">
 		              <span class="icon"><i class="fab fa-blogger"></i></span>
 		              <span class="list">Logout</span>
 		            </a>
