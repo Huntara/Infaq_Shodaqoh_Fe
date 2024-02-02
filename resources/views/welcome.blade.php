@@ -27,7 +27,7 @@
     <nav>
         <div class="container-navbar">
             <div class="nav-title-nav">
-                <img src="{{ asset('image/icon-web.jpg') }}" width="30" alt="">
+                <img src="{{ asset('image/icon-web.jpg') }}" width="50" alt="">
                 <a href="#" class="navbar nav-title">Infak <span class="span-nav-title">Wikrama</span></a>
             </div>
             <div class="nav-menu" id="nav">
@@ -131,31 +131,40 @@
         <div class="col-footer satu">
             <div class="content">
                 <img src="{{ asset('image/icon-web.jpg') }}" class="img-footer" alt="">
-                <p>INFAK WIKRAMA</p>
-                <p>
-                    Jl. Raya Wangun, RT.01/RW.06, Sindangsari, Kec. Bogor Tim., Kota Bogor, Jawa Barat 16146
-                </p>
+                <h3>INFAK WIKRAMA</h3>
                 <div class="socials">
-                    <a href="https://www.instagram.com/smkwikrama/">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/smkwikrama">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@smkwikrama">
-                        <i class="bi bi-tiktok"></i>
-                    </a>
+                    <button 
+                        id="social-instagram" 
+                        class="btn-social"
+                    >
+                        <i class="bi bi-instagram icon-footer"></i>
+                    </button>
+                    <button 
+                        id="social-tiktok" 
+                        class="btn-social"
+                    >
+                        <i class="bi bi-tiktok icon-footer"></i>
+                    </button>
+                    <button 
+                        id="social-facebook" 
+                        class="btn-social"
+                    >
+                        <i class="bi bi-facebook icon-footer"></i>
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="col-footer dua">
-            <h1>Kontak</h1>
-            <p class="p-footer"><i class="bi bi-telephone-fill"></i>(0251) 8242411</p>
-        </div>
         <div class="col-footer tiga">
-            <h1>Quick Link</h1>
+            <h3>TAUTAN</h3>
             <a href="#home" class="nav-item p-footer">Home</a>
             <a href="#about" class="nav-item p-footer">Tentang Infak</a>
+        </div>
+        <div class="col-footer dua">
+            <h3>KONTAK</h3>
+            <p class="p-footer tlp"><i class="icon-footer-fill"></i>(0251) 8242411</p>
+            <p class="p-footer">
+                Jl. Raya Wangun, RT.01/RW.06, Sindangsari, Kec. Bogor Tim., Kota Bogor, Jawa Barat 16146
+            </p>
         </div>
     </footer>
     {{-- end footer --}}
