@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InfaqController;
+use App\Http\Controllers\PaymentController;
 
 
 /*
@@ -24,3 +25,5 @@ Route::get('tagihan', [InfaqController::class, 'tagihan']);
 Route::get('payment', [InfaqController::class, 'payment']);
 Route::get('dashboard', [InfaqController::class, 'dashboard']);
 Route::get('login', [InfaqController::class, 'login']);
+Route::get('forgot-password', [InfaqController::class, 'forgotpassword']);
+

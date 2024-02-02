@@ -31,8 +31,8 @@ class InfaqController extends Controller
         return view('login');
     }
 
-    public function register()
+    public function forgotpassword()
     {
-        return view('register');
+        return view('forgot-password');
     }
 }

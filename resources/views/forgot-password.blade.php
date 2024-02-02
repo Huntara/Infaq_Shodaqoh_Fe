@@ -73,7 +73,6 @@
           <button class="btn-login">Join Us</button>
           <div class="help">
             <div class="link">
-              <p>Have account? <a href="../login/login.html">Login here</a></p>
             </div>
           </div>
         </form>
