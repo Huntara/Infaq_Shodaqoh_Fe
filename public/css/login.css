@@ -98,6 +98,10 @@ form {
     cursor: pointer;
 }
 
+#checkbox {
+    outline: none;
+}
+
 
 a {
     color: rgb(10, 69, 178);

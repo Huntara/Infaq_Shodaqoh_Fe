@@ -145,6 +145,7 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* background-attachment: fixed; */
     position: relative;
 }
 
@@ -469,7 +470,7 @@ footer {
     }
 
     /* Close and open hamburger*/
-    /* .input-hamburger:checked ~ .hambuger-menu:nth-child(2) {
+    .input-hamburger:checked ~ .hambuger-menu:nth-child(2) {
         transform:  rotate(45deg) translate(0, .5px);
     }
 
@@ -480,7 +481,7 @@ footer {
 
     .input-hamburger:checked ~ .hambuger-menu:nth-child(4) {
         transform:  rotate(-45deg) translate(-3px, 0);
-    } */
+    }
 }
 
 @media screen and (max-width: 576px) {

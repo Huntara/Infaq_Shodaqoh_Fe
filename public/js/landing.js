@@ -49,18 +49,18 @@ $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
 
     // about
-    if (wScroll > $('.parallax-about').offset().top - 450) {
+    if (wScroll > $('.parallax-about').offset().top - 550) {
         $('.parallax-about').each(function (i) {
           setTimeout(function () {
             $('.parallax-about').eq(i).addClass('muncul');
           }, 500 * (i + 1));
         })
     };
-    if (wScroll > $('.parallax-about-dua').offset().top - 450) {
+    if (wScroll > $('.parallax-about-dua').offset().top - 550) {
         $('.parallax-about-dua').each(function (i) {
           setTimeout(function () {
             $('.parallax-about-dua').eq(i).addClass('muncul');
           }, 500 * (i + 1));
         })
-    };
+    };  
 })

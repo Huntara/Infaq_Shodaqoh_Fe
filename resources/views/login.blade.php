@@ -42,6 +42,10 @@
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" class="form-control" required />
                 </div>
+                <div class="form-input">
+                    <input type="checkbox" name="checkbox" id="checkbox" class="" required />
+                    <label for="checkbox">Show Password</label>
+                </div>
                 <button class="btn-login">Login</button>
                 <div class="help">
                     <div class="link">
@@ -53,7 +57,7 @@
         </div>
     </div>
 
-    <script src="login.js"></script>
+    <script src="{{asset('js/login.js')}}"></script>
 </body>
 
 </html>
