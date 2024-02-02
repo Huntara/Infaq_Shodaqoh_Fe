@@ -49,8 +49,7 @@
                 <button class="btn-login">Login</button>
                 <div class="help">
                     <div class="link">
-                        <p>Doesn't have account? <a href="../register/register.html">Register here</a></p>
-                        <a href="#">Forgot your password?</a>
+                        {{-- <a href="/forgot-password">Forgot your password?</a> --}}
                     </div>
                 </div>
             </form>
