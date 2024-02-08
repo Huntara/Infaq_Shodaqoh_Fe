@@ -20,10 +20,6 @@ body {
 }
 
 .col.satu {
-    flex: 1.5;
-}
-
-.col.satu {
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -35,4 +35,8 @@ class InfaqController extends Controller
     {
         return view('forgot-password');
     }
+
+    public function pembayaran() {
+        return view('pembayaran');
+    }
 }

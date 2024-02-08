@@ -26,4 +26,5 @@ Route::get('payment', [InfaqController::class, 'payment']);
 Route::get('dashboard', [InfaqController::class, 'dashboard']);
 Route::get('login', [InfaqController::class, 'login']);
 Route::get('forgot-password', [InfaqController::class, 'forgotpassword']);
+Route::get('pembayaran', [InfaqController::class,'pembayaran']);
 

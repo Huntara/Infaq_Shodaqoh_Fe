@@ -49,7 +49,7 @@
                 <button class="btn-login">Login</button>
                 <div class="help">
                     <div class="link">
-                        {{-- <a href="/forgot-password">Forgot your password?</a> --}}
+                        <a href="/forgot-password">Forgot your password?</a>
                     </div>
                 </div>
             </form>
