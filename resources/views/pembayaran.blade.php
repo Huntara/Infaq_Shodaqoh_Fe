@@ -30,11 +30,11 @@
                 <h5 class="title-content">Tunaikan Infak Disini</h5>
                 <div class="my-4 form-input">
                     <input 
-                        type="number" 
+                        type="text" 
                         class="form-control px-5 shadow py-3"
-                        placeholder="Isi Nominal Donasi"
+                        placeholder="Isi Nominal Donasi (minimal 10.000)"
                         required
-                        min="10000"
+                        oninput="validateAndFormat(this)"
                     >
                     <label 
                         for="nominal" 
@@ -50,7 +50,6 @@
                         id="payment-method"
                         required
                     >
-                        <option selected disabled hidden>Pilih Metode Pembayaran</option>
                         <option value="1" data-icon>Dana</option>
                         <option value="2">Gopay</option>
                         <option value="3">Qris</option>
@@ -78,12 +77,20 @@
                         >
                     </div>
                     <div class="checkbox">
-                        <div class="checkbox-wrapper">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox"></span>
-                            </label>
-                        </div>
+                        <label class="contain">
+                            <input type="checkbox">
+                            <svg 
+                                viewBox="0 0 64 64" 
+                                height="2em" 
+                                width="2em"
+                            >
+                                <path 
+                                    d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" 
+                                    pathLength="575.0541381835938" 
+                                    class="path"
+                                ></path>
+                            </svg>
+                        </label>
                         <p class="ps-5 pr">Infak Sebagai Hamba Allah</p>
                     </div>
                 </div>
@@ -113,6 +120,7 @@
 
     {{-- bootstrap script --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

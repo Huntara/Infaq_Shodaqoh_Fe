@@ -54,8 +54,8 @@ label {
 }
 
 .pr {
-    transform: translateY(-5px);
-    margin-right: 10px;
+    transform: translate(10px, 5px);
+    user-select: none;
 }
 
 .select-placeholder {
@@ -86,47 +86,41 @@ label {
 
 
 /* checkbox */
-.checkbox-wrapper *,
-  .checkbox-wrapper *::before,
-  .checkbox-wrapper *::after {
-  box-sizing: border-box;
-  position: relative;
-  top: 8px;
-  left: 5px;
-  z-index: 2;
+.checkbox {
+    position: relative;
 }
-
-.checkbox-wrapper label {
-  display: block;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-}
-
-.checkbox-wrapper input {
-  visibility: hidden;
-  display: none;
-}
-
-.checkbox-wrapper input:checked ~ .checkbox {
-  transform: rotate(45deg);
-  width: 14px;
-  margin-left: 12px;
-  border-color: #22e736;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-radius: 0;
-}
-
-.checkbox-wrapper .checkbox {
-  display: block;
-  width: inherit;
-  height: inherit;
-  border: 3px solid #434343;
-  border-radius: 6px;
-  margin-top: 10px;
-  transition: all 0.375s;
-}
+.contain {
+    cursor: pointer;
+    top: 0;
+    z-index: 2;
+  }
+  
+  .contain input {
+    display: none;
+  }
+  
+  .contain svg {
+    overflow: visible;
+  }
+  
+  .path {
+    fill: none;
+    stroke: rgb(77, 77, 77);
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+    stroke-dasharray: 241 9999999;
+    stroke-dashoffset: 0;
+    transition: all .5s ease;
+  }
+  
+  .contain input:checked ~ svg .path {
+    stroke-dasharray: 70.5096664428711 9999999;
+    stroke-dashoffset: -262.2723388671875;
+    stroke: lightgreen;
+  }
+  
 
 .btn {
     transition: all .3s ease;

@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             button.classList.remove('btn-success');
             button.classList.add('btn-secondary');
-            button.disabled = true;
+            // button.disabled = true;
         }
     });
 });
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputNamaDonatur = document.querySelector('.nama-donatur');
 
     checkbox.addEventListener('change', function() {
-        if (this.checked) {
+        if (checkbox.checked) {
             inputNamaDonatur.removeAttribute('required');
             inputNamaDonatur.disabled = true;
             inputNamaDonatur.value = '';
@@ -41,6 +41,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+
+// memberikan koma pada saat mencapai angka ribuan dst
+function validateAndFormat(input) {
+    let value = input.value.replace(/\D/g, '');
+
+    input.value = Number(value).toLocaleString('id-ID');
+
+    if (parseInt(value) < 10000) {
+        input.setCustomValidity('Minimal nominal yang harus anda masukan adalah 10.000');
+    } else {
+        input.setCustomValidity('');
+    }
+}
+
 
 // select option
 document.addEventListener('DOMContentLoaded', function() {
@@ -56,6 +72,43 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// validasi select option
+document.addEventListener('DOMContentLoaded', function() {
+    const selectElement = document.getElementById('payment-method');
+
+    // Menambahkan event listener untuk memeriksa validitas saat opsi dipilih
+    selectElement.addEventListener('change', function() {
+        if (this.value === '') {
+            this.setCustomValidity('Pilih salah satu metode pembayaran');
+        } else {
+            this.setCustomValidity('');
+        }
+    });
+
+    // Menetapkan validitas awal saat halaman dimuat
+    if (selectElement.value === '') {
+        selectElement.setCustomValidity('Pilih salah satu metode pembayaran');
+    } else {
+        selectElement.setCustomValidity('');
+    }
+});
+
+// placeholder select option
+document.addEventListener('DOMContentLoaded', function() {
+    const selectElement = document.getElementById('payment-method');
+
+    // Buat elemen option baru untuk placeholder
+    const placeholderOption = document.createElement('option');
+    placeholderOption.text = 'Pilih Metode Pembayaran';
+    placeholderOption.value = '';
+    placeholderOption.disabled = true;
+    placeholderOption.selected = true;
+
+    // Sisipkan elemen option baru di awal dropdown
+    selectElement.insertBefore(placeholderOption, selectElement.firstChild);
+});
+
 
 // no telpon
 document.addEventListener('DOMContentLoaded', function() {
