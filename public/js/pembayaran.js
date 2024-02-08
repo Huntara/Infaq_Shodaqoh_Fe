@@ -28,29 +28,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const checkbox = document.querySelector('input[type="checkbox"]');
     const inputNamaDonatur = document.querySelector('.nama-donatur');
 
-    const savedValue = localStorage.getItem('namaDonatur');
-    if (savedValue) {
-        inputNamaDonatur.value = savedValue;
-    }
-
-    inputNamaDonatur.addEventListener('input', function() {
-        localStorage.setItem('namaDonatur', this.value);
-    });
-
     checkbox.addEventListener('change', function() {
         if (this.checked) {
-            localStorage.setItem('namaDonatur', inputNamaDonatur.value);
             inputNamaDonatur.removeAttribute('required');
             inputNamaDonatur.disabled = true;
-            inputNamaDonatur.value = 'Anda infak sebagai hamba Allah';
+            inputNamaDonatur.value = '';
+            inputNamaDonatur.placeholder = 'Anda infak sebagai hamba Allah';
         } else {
-            const previousValue = localStorage.getItem('namaDonatur');
-            if (previousValue) {
-                inputNamaDonatur.value = previousValue;
-                inputNamaDonatur.setAttribute('required', true);
-                inputNamaDonatur.disabled = false;
-                inputNamaDonatur.placeholder = 'Masukkan Nama Donatur';
-            }
+            inputNamaDonatur.setAttribute('required', true);
+            inputNamaDonatur.disabled = false;
+            inputNamaDonatur.placeholder = 'Masukkan Nama Donatur';
         }
     });
 });
