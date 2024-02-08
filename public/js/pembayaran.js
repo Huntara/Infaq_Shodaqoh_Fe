@@ -28,16 +28,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const checkbox = document.querySelector('input[type="checkbox"]');
     const inputNamaDonatur = document.querySelector('.nama-donatur');
 
+    const savedValue = localStorage.getItem('namaDonatur');
+    if (savedValue) {
+        inputNamaDonatur.value = savedValue;
+    }
+
+    inputNamaDonatur.addEventListener('input', function() {
+        localStorage.setItem('namaDonatur', this.value);
+    });
+
     checkbox.addEventListener('change', function() {
         if (this.checked) {
+            localStorage.setItem('namaDonatur', inputNamaDonatur.value);
             inputNamaDonatur.removeAttribute('required');
             inputNamaDonatur.disabled = true;
-            inputNamaDonatur.value = '';
-            inputNamaDonatur.placeholder = 'Anda infak sebagai hamba Allah';
+            inputNamaDonatur.value = 'Anda infak sebagai hamba Allah';
         } else {
-            inputNamaDonatur.setAttribute('required', true);
-            inputNamaDonatur.disabled = false;
-            inputNamaDonatur.placeholder = 'Masukkan Nama Donatur';
+            const previousValue = localStorage.getItem('namaDonatur');
+            if (previousValue) {
+                inputNamaDonatur.value = previousValue;
+                inputNamaDonatur.setAttribute('required', true);
+                inputNamaDonatur.disabled = false;
+                inputNamaDonatur.placeholder = 'Masukkan Nama Donatur';
+            }
         }
     });
 });
@@ -51,6 +64,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (selectedOption.value === "") {
             this.setCustomValidity('Pilih metode pembayaran');
+        } else {
+            this.setCustomValidity('');
+        }
+    });
+});
+
+// no telpon
+document.addEventListener('DOMContentLoaded', function() {
+    const inputNoHp = document.querySelector('.no-hp input');
+
+    inputNoHp.addEventListener('input', function() {
+        const value = this.value;
+        if (value.length < 12 || !/^\d+$/.test(value)) {
+            this.setCustomValidity('Masukkan nomor telepon dengan minimal 12 karakter.');
         } else {
             this.setCustomValidity('');
         }

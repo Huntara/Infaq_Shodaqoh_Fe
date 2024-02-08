@@ -68,7 +68,7 @@
 
 
                 <h5 class="title-content mt-3">Lengkapi Data Penginfak</h5>
-                <div class="content d-flex align-items-center gap-3 flex-wrap">
+                <div class="content d-flex align-items-center gap-3 flex-wrap mb-3">
                     <div class="form-input data">
                         <input 
                             type="text" 
@@ -86,6 +86,21 @@
                         </div>
                         <p class="ps-5 pr">Infak Sebagai Hamba Allah</p>
                     </div>
+                </div>
+                <div class="no-hp mb-3">
+                    <input 
+                        type="number" 
+                        class="form-control shadow py-3"
+                        placeholder="Masukan Nomer telpon Anda"
+                        required
+                    >
+                </div>
+                <div class="doa">
+                    <input 
+                        type="text" 
+                        class="form-control shadow py-3"    
+                        placeholder="Doa (Opsional)"
+                    >
                 </div>
                 <div class="d-flex justify-content-end align-items-center pt-5">
                     <button type="submit" class="btn btn-secondary ml-auto px-5 py-2">Submit</button>
