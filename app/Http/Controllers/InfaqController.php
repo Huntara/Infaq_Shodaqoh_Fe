@@ -16,11 +16,6 @@ class InfaqController extends Controller
         return view('Tagihan');
     }
 
-    public function payment()
-    {
-        return view('Payment');
-    }
-
     public function dashboard()
     {
         return view('Dashboard');
