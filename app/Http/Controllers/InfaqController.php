@@ -16,9 +16,15 @@ class InfaqController extends Controller
         return view('Tagihan');
     }
 
+<<<<<<< HEAD
     public function dashAdm()
     {
         return view('dashAdm');
+=======
+    public function dashboard()
+    {
+        return view('Dashboard');
+>>>>>>> 87638e42a4016d9398e9358bf2bdbe00600c9ab5
     }
 
     public function login()
@@ -35,7 +41,14 @@ class InfaqController extends Controller
         return view('pembayaran');
     }
 
+<<<<<<< HEAD
     public function dashUser() {
         return view('dashUser');
     }
+=======
+    public function popup() 
+    {
+        return view('popup');
+    } 
+>>>>>>> 87638e42a4016d9398e9358bf2bdbe00600c9ab5
 }

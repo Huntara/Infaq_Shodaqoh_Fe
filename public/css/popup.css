@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -35,3 +36,13 @@
     text-decoration: none;
     cursor: pointer;
   }
+=======
+.card-popup {
+    border-radius: 14px;
+    background: #e0e0e0;
+    box-shadow: 35px 35px 70px #bebebe,
+        -35px -35px 70px #ffffff;
+    padding: 30px;
+    width: max-content;
+}
+>>>>>>> 87638e42a4016d9398e9358bf2bdbe00600c9ab5
