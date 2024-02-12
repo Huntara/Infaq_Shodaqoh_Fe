@@ -18,8 +18,8 @@ body {
 }
 
 .card-pembayaran {
-    width: 100%;
-    max-width: 1000px;
+    width: fill;
+    max-width: 900px;
 }
 
 .form-input {
@@ -36,13 +36,14 @@ input[type=number]::-webkit-outer-spin-button {
     outline: none;
     border: none;
     box-shadow: none;
+    width: 100%;
 }
 
 input[type=number] {
     -moz-appearance: textfield;
 }
 
-label {
+label.label {
     position: absolute;
     top: 16px;
     left: 15px;
@@ -50,7 +51,6 @@ label {
 
 .form-input.data {
     width: 100%;
-    max-width: 500px;
 }
 
 .pr {
@@ -128,8 +128,5 @@ label {
 
 /* breakpoint */
 @media screen and (max-width: 942px) {
-    .form-input.data {
-        width: 100%;
-        max-width: 100%;
-    }
+    
 }

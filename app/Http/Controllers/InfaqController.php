@@ -39,4 +39,9 @@ class InfaqController extends Controller
     public function pembayaran() {
         return view('pembayaran');
     }
+
+    public function popup() 
+    {
+        return view('popup');
+    } 
 }
