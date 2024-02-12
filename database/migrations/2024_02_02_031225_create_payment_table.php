@@ -17,8 +17,9 @@ return new class extends Migration
             $table->foreign('users_id')->references('id')->on('users');
             $table->string("nama_bank")->nullable();
             $table->string("pemilik_bank")->nullable();
-            $table->string("nominal");
-            $table->string('bukti_pembayaran')->nullable();
+            $table->integer("nominal");
+            $table->integer("no_telpon");
+            $table->string('image')->nullable();
             $table->enum('status', ['Proses', 'Selesai', 'Tolak'])->default('Proses');
             $table->date('done_time')->nullable();
             $table->timestamps();
