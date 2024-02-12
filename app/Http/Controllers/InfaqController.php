@@ -16,14 +16,9 @@ class InfaqController extends Controller
         return view('Tagihan');
     }
 
-    public function payment()
+    public function dashAdm()
     {
-        return view('Payment');
-    }
-
-    public function dashboard()
-    {
-        return view('Dashboard');
+        return view('dashAdm');
     }
 
     public function login()
@@ -38,5 +33,9 @@ class InfaqController extends Controller
 
     public function pembayaran() {
         return view('pembayaran');
+    }
+
+    public function dashUser() {
+        return view('dashUser');
     }
 }

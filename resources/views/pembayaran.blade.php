@@ -76,7 +76,7 @@
                             required
                         >
                     </div>
-                    <div class="checkbox">
+                    {{-- <div class="checkbox">
                         <label class="contain">
                             <input type="checkbox">
                             <svg 
@@ -92,7 +92,7 @@
                             </svg>
                         </label>
                         <p class="ps-5 pr">Infak Sebagai Hamba Allah</p>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="no-hp mb-3">
                     <input 
