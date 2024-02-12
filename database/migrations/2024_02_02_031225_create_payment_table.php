@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('payment', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_lengkap');
-            $table->integer('nis_siswa')->unique();
-            $table->integer('nomor_wa')->unique();
-            $table->string('email')->unique();
-            $table->string('total_payment');
-            $table->date('bulan');
-            $table->string('image_payment');
+            $table->unsignedBigInteger('users_id');
+            $table->foreign('users_id')->references('id')->on('users');
+            $table->string("nama_bank")->nullable();
+            $table->string("pemilik_bank")->nullable();
+            $table->string("nominal");
+            $table->string('bukti_pembayaran')->nullable();
+            $table->enum('status', ['Proses', 'Selesai', 'Tolak'])->default('Proses');
+            $table->date('done_time')->nullable();
             $table->timestamps();
         });
     }
