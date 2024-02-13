@@ -55,24 +55,24 @@
                 <div class="head">
                     <h3>Riwayat Pembayaran</h3>
                     <i class='bx bx-search' ></i>
-                    <i class='bx bx-filter' ></i>
                 </div>
                 <table>
                     <thead>
                         <tr>
-                            <th>User</th>
-                            <th>Date Order</th>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Tanggal</th>
                             <th>Status</th>
                         </tr>
                     </thead>
                 </table>
             </div>
-            <div class="todo">
+            {{-- <div class="todo">
                 <div class="head">
                     <h3>Todos</h3>
                     <i class='bx bx-plus' ></i>
                     <i class='bx bx-filter' ></i>
-                </div>
+                </div> --}}
                 {{-- <ul class="todo-list">
                     <li class="completed">
                         <p>Todo List</p>

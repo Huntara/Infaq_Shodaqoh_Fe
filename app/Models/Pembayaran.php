@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class Payment extends Model
+class Pembayaran extends Model
 {
     use HasFactory;
 
-    protected $table='payment';
+    protected $table='pembayaran';
 
     protected $fillable = [
         'nama_bank',

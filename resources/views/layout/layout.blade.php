@@ -33,6 +33,49 @@
 <body>
 
 
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand" style="margin-left: 20px">
+			<img src="{{ asset('image/icon-web.jpg') }}" width="30" alt="">
+			<span class="text" style="margin-left: 15px">Infaq Wikrama</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="/dashAdmin">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="/pembayaran">
+					<i class='bx bxs-credit-card' ></i>
+					<span class="text">Pembayaran</span>
+				</a>
+			</li>
+			<li>
+				<a href="/riwayat">
+					<i class='bx bxs-time-five' ></i>
+					<span class="text">Riwayat</span>
+				</a>
+			</li>
+			<li>
+				<a href="/tagihan">
+					<i class='bx bxs-book' ></i>
+					<span class="text">Tagihan</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="/" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
     <!-- SIDEBAR -->
     <section id="sidebar">
         <a href="#" class="brand" style="margin-left: 20px">
@@ -41,7 +84,7 @@
         </a>
         <ul class="side-menu top">
             <li class="active">
-                <a href="/dashboard">
+                <a href="/dashUser">
                     <i class='bx bxs-dashboard'></i>
                     <span class="text">Dashboard</span>
                 </a>
@@ -67,7 +110,7 @@
         </ul>
         <ul class="side-menu">
             <li>
-                <a href="#" class="logout">
+                <a href="/" class="logout">
                     <i class='bx bxs-log-out-circle'></i>
                     <span class="text">Logout</span>
                 </a>
@@ -75,7 +118,6 @@
         </ul>
     </section>
     <!-- SIDEBAR -->
-
 
 
     <!-- CONTENT -->
