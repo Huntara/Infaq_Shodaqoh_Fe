@@ -33,7 +33,6 @@
 <body>
 
 
-<<<<<<< HEAD
 	<!-- SIDEBAR -->
 	<section id="sidebar">
 		<a href="#" class="brand" style="margin-left: 20px">
@@ -76,7 +75,7 @@
 		</ul>
 	</section>
 	<!-- SIDEBAR -->
-=======
+
     <!-- SIDEBAR -->
     <section id="sidebar">
         <a href="#" class="brand" style="margin-left: 20px">
@@ -85,7 +84,7 @@
         </a>
         <ul class="side-menu top">
             <li class="active">
-                <a href="/dashboard">
+                <a href="/dashUser">
                     <i class='bx bxs-dashboard'></i>
                     <span class="text">Dashboard</span>
                 </a>
@@ -103,7 +102,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/tagihan">
                     <i class='bx bxs-book'></i>
                     <span class="text">Tagihan</span>
                 </a>
@@ -118,9 +117,6 @@
             </li>
         </ul>
     </section>
-    <!-- SIDEBAR -->
->>>>>>> 87638e42a4016d9398e9358bf2bdbe00600c9ab5
-
 
 
     <!-- CONTENT -->

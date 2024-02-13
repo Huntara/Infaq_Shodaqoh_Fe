@@ -3,53 +3,13 @@
 
 
 @section('content')
-
-<style>
-    /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 15px;
-    border: 1px solid #888;
-    width: 70%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-</style>
     <main>
         <div class="head-title">
             <div class="left">
                 <h1>Dashboard</h1>
                 <ul class="breadcrumb">
                     <li>
-                        <a href="#">Dashboard</a>
+                        <a href="/dashUser">Dashboard</a>
                     </li>
                     <li><i class='bx bx-chevron-right' ></i></li>
                     <li>
@@ -63,23 +23,8 @@
             </a> --}}
         </div>
 
-                
-        <div>
-            <!-- Trigger/Open The Modal -->
-        <button id="myBtn">Open Modal</button>
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content" style="margin-right: 50px">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
-        </div>
-
-        </div>
-
-        <ul class="box-info">
+        <ul class="box-info" style="width: 80%">
             <li>
                 {{-- <i class='bx bxs-calendar-check' ></i> --}}
                 <span class="text">
@@ -103,53 +48,30 @@
             </li> --}}
         </ul>
 
-
         <div class="table-data">
             <div class="order">
                 <div class="head">
-                    <h5>Perjanjian Infaq</h5>
-                    {{-- <i class='bx bx-search' ></i>
-                    <i class='bx bx-filter' ></i> --}}
+                    <span class="text">
+                        <h4>الصدقة تطفئ غضب الرب وتدفع ميتة السوء</h4>
+                        <p>"Sesungguhnya sedekah itu memadamkan murka Allah 
+                            <br>dan menolak mati jelek (su'ul khatimah)." (HR. Thabrani)</p>
+                    </span>
                 </div>
-                {{-- <table>
-                    <thead>
-                        <tr>
-                            <th>User</th>
-                            <th>Date Order</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                </table> --}}
             </div>
             <div class="todo">
                 <div class="head">
-                    <h5>Riwayat Pembayaran</h5>
-                    {{-- <i class='bx bx-plus' ></i>
-                    <i class='bx bx-filter' ></i> --}}
+                    <h5>Perjanjian Infaq</h5>
                 </div>
-                {{-- <ul class="todo-list">
-                    <li class="completed">
-                        <p>Todo List</p>
-                        <i class='bx bx-dots-vertical-rounded' ></i>
-                    </li>
-                    <li class="completed">
-                        <p>Todo List</p>
-                        <i class='bx bx-dots-vertical-rounded' ></i>
-                    </li>
-                    <li class="not-completed">
-                        <p>Todo List</p>
-                        <i class='bx bx-dots-vertical-rounded' ></i>
-                    </li>
-                    <li class="completed">
-                        <p>Todo List</p>
-                        <i class='bx bx-dots-vertical-rounded' ></i>
-                    </li>
-                    <li class="not-completed">
-                        <p>Todo List</p>
-                        <i class='bx bx-dots-vertical-rounded' ></i>
-                    </li> --}}
-                </ul>
             </div>
+        </div>
+
+        <div class="table-data">
+            <div class="todo">
+                <div class="head">
+                    <h5>Riwayat Pembayaran</h5>
+                </div>
+            </div>
+        </div>
 
             <script>
                 // Get the modal

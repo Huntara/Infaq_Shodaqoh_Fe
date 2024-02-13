@@ -3,9 +3,7 @@
 @section('title', 'Pembayaran')
 
 @section('content')
-
-
-<<<<<<< HEAD
+{{-- 
                 <h5 class="title-content mt-3">Lengkapi Data Penginfak</h5>
                 <div class="content d-flex align-items-center gap-3 flex-wrap mb-3">
                     <div class="form-input data">
@@ -15,7 +13,7 @@
                             placeholder="Masukan Nama Donatur"
                             required
                         >
-                    </div>
+                    </div> --}}
                     {{-- <div class="checkbox">
                         <label class="contain">
                             <input type="checkbox">
@@ -33,7 +31,7 @@
                         </label>
                         <p class="ps-5 pr">Infak Sebagai Hamba Allah</p>
                     </div> --}}
-                </div>
+                {{-- </div>
                 <div class="no-hp mb-3">
                     <input 
                         type="number" 
@@ -53,8 +51,8 @@
                     <button type="submit" class="btn btn-secondary ml-auto px-5 py-2">Submit</button>
                 </div>
             </form>
-        </div>
-=======
+        </div> --}}
+
     <body style="background-color: #eeeeee;">
 
         <div class="card-pembayaran p-3 me-5 shadow d-flex justify-content-center flex-column rounded-3 overflow-hidden"
@@ -82,7 +80,7 @@
                             <i class="bi bi-wallet fw-bold"></i>
                         </label>
                     </div>
->>>>>>> 87638e42a4016d9398e9358bf2bdbe00600c9ab5
+
 
 
                     <h5 class="title-content mt-5">Lengkapi Data Penginfak</h5>

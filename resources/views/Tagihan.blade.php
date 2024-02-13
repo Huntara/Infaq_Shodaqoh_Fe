@@ -57,7 +57,7 @@
                         <tr>
                             <th>No</th>
                             <th>Nama</th>
-                            <th>Tanggal</th>
+                            <th>Bulan</th>
                         </tr>
                     </thead>
                 </table>

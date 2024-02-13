@@ -25,18 +25,14 @@ Route::get('/', function () {
 
 Route::get('riwayat', [InfaqController::class, 'riwayat']);
 Route::get('tagihan', [InfaqController::class, 'tagihan']);
-<<<<<<< HEAD
 Route::get('payment', [InfaqController::class, 'payment']);
 Route::get('dashAdm', [InfaqController::class, 'dashAdm']);
 Route::get('login', [InfaqController::class, 'login']);
 Route::get('forgot-password', [InfaqController::class, 'forgotpassword']);
 Route::get('pembayaran', [InfaqController::class,'pembayaran']);
 Route::get('dashUser', [InfaqController::class,'dashUser']);
-
-=======
 Route::get('dashboard', [InfaqController::class, 'dashboard']);
 Route::get('login', [InfaqController::class, 'login']);
 Route::get('forgot-password', [InfaqController::class, 'forgotpassword']);
 Route::get('pembayaran', [InfaqController::class,'pembayaran']);
 Route::get('popup', [InfaqController::class, 'popup']);
->>>>>>> 87638e42a4016d9398e9358bf2bdbe00600c9ab5
