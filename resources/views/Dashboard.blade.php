@@ -5,11 +5,11 @@
 @section('content')
 
 <div>
-    <h1 style="margin-left: 20px">Selamat Datang Admin</h1>
+    <h3 style="margin-left: 20px">Selamat Datang, {{Auth::user()->name}}</h3>
     <main>
         <div class="head-title">
             <div class="left">
-                <h1>Dashboard</h1>
+                <h3>Dashboard</h3>
                 <ul class="breadcrumb">
                     <li>
                         <a href="#">Dashboard</a>

@@ -33,17 +33,18 @@
         </div>
         <div class="col dua">
             <h1 class="title">Login</h1>
-            <form action="">
+            <form action="login" method="POST">
+                @csrf
                 <div class="form-input">
-                    <label for="email">Enter your email</label>
-                    <input type="email" name="email" id="email" class="form-control" required />
+                    <label for="name">Masukan Nama Anda</label>
+                    <input type="text" name="name" id="name" class="form-control" required />
                 </div>
                 <div class="form-input">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" class="form-control" required />
                 </div>
                 <div class="form-input">
-                    <input type="checkbox" name="checkbox" id="checkbox" class="" required />
+                    <input type="checkbox" name="checkbox" id="checkbox" class="" />
                     <label for="checkbox">Show Password</label>
                 </div>
                 <button class="btn-login">Login</button>
@@ -57,6 +58,17 @@
     </div>
 
     <script src="{{asset('js/login.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @if($message = Session::get('error'))
+    <script>
+        Swal.fire({
+        icon: "error",
+        title: "Oops",
+        text: "{{$message}}",
+        });
+    </script>
+    @endif
 </body>
 
 </html>

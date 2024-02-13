@@ -9,10 +9,12 @@
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
 
 	<!-- My CSS -->
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="{{ asset('css/layout.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/popup.css') }}">
 	<script src="{{ asset('js/layout.js') }}"></script>
 
 	<title>Infaq Wikrama</title>
@@ -54,7 +56,8 @@
 		</ul>
 		<ul class="side-menu">
 			<li>
-				<a href="#" class="logout">
+				
+				<a href="/logout" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">Logout</span>
 				</a>
