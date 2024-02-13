@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InfaqController;
-use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\PembayaranController;
 
-use App\Models\Payment;
+use App\Models\Pembayaran;
 
 
 
@@ -22,21 +22,21 @@ use App\Models\Payment;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('pembayaran', [PembayaranController::class, 'pembayaran']);
+Route::get('pembayaran/create', [PembayaranController::class, 'store']);
+Route::get('pembayaran/{id}/edit', [PembayaranController::class, 'edit']);
+Route::get('pembayaran/{id}/update', [PembayaranController::class, 'update']);
+Route::get('pembayaran/{id}/delete', [PembayaranController::class, 'delete']);
 
 Route::get('riwayat', [InfaqController::class, 'riwayat']);
 Route::get('tagihan', [InfaqController::class, 'tagihan']);
-<<<<<<< HEAD
-Route::get('payment', [InfaqController::class, 'payment']);
-Route::get('dashAdm', [InfaqController::class, 'dashAdm']);
+Route::get('dashAdmin', [InfaqController::class, 'dashAdmin']);
 Route::get('login', [InfaqController::class, 'login']);
 Route::get('forgot-password', [InfaqController::class, 'forgotpassword']);
-Route::get('pembayaran', [InfaqController::class,'pembayaran']);
-Route::get('dashUser', [InfaqController::class,'dashUser']);
+Route::get('dashUser', [InfaqController::class, 'dashUser']);
 
-=======
 Route::get('dashboard', [InfaqController::class, 'dashboard']);
 Route::get('login', [InfaqController::class, 'login']);
 Route::get('forgot-password', [InfaqController::class, 'forgotpassword']);
-Route::get('pembayaran', [InfaqController::class,'pembayaran']);
+Route::get('pembayaran', [InfaqController::class, 'pembayaran']);
 Route::get('popup', [InfaqController::class, 'popup']);
->>>>>>> 87638e42a4016d9398e9358bf2bdbe00600c9ab5

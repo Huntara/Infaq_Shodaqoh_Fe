@@ -33,7 +33,6 @@
 <body>
 
 
-<<<<<<< HEAD
 	<!-- SIDEBAR -->
 	<section id="sidebar">
 		<a href="#" class="brand" style="margin-left: 20px">
@@ -42,7 +41,7 @@
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
-				<a href="/dashAdm">
+				<a href="/dashAdmin">
 					<i class='bx bxs-dashboard' ></i>
 					<span class="text">Dashboard</span>
 				</a>
@@ -68,7 +67,7 @@
 		</ul>
 		<ul class="side-menu">
 			<li>
-				<a href="#" class="logout">
+				<a href="/" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">Logout</span>
 				</a>
@@ -76,7 +75,7 @@
 		</ul>
 	</section>
 	<!-- SIDEBAR -->
-=======
+
     <!-- SIDEBAR -->
     <section id="sidebar">
         <a href="#" class="brand" style="margin-left: 20px">
@@ -85,7 +84,7 @@
         </a>
         <ul class="side-menu top">
             <li class="active">
-                <a href="/dashboard">
+                <a href="/dashUser">
                     <i class='bx bxs-dashboard'></i>
                     <span class="text">Dashboard</span>
                 </a>
@@ -111,7 +110,7 @@
         </ul>
         <ul class="side-menu">
             <li>
-                <a href="#" class="logout">
+                <a href="/" class="logout">
                     <i class='bx bxs-log-out-circle'></i>
                     <span class="text">Logout</span>
                 </a>
@@ -119,8 +118,6 @@
         </ul>
     </section>
     <!-- SIDEBAR -->
->>>>>>> 87638e42a4016d9398e9358bf2bdbe00600c9ab5
-
 
 
     <!-- CONTENT -->

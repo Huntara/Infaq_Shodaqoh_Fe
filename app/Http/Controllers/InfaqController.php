@@ -16,15 +16,19 @@ class InfaqController extends Controller
         return view('Tagihan');
     }
 
-<<<<<<< HEAD
-    public function dashAdm()
+    public function dashAdmin()
     {
-        return view('dashAdm');
-=======
+        return view('dashAdmin');
+    }
+
     public function dashboard()
     {
         return view('Dashboard');
->>>>>>> 87638e42a4016d9398e9358bf2bdbe00600c9ab5
+    }
+
+    public function pembayaran()
+    {
+        return view('pembayaran');
     }
 
     public function login()
@@ -37,18 +41,13 @@ class InfaqController extends Controller
         return view('forgot-password');
     }
 
-    public function pembayaran() {
-        return view('pembayaran');
-    }
-
-<<<<<<< HEAD
-    public function dashUser() {
+    public function dashUser()
+    {
         return view('dashUser');
     }
-=======
-    public function popup() 
+
+    public function popup()
     {
         return view('popup');
-    } 
->>>>>>> 87638e42a4016d9398e9358bf2bdbe00600c9ab5
+    }
 }
