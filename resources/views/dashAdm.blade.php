@@ -12,7 +12,7 @@
                 <h1>Dashboard</h1>
                 <ul class="breadcrumb">
                     <li>
-                        <a href="#">Dashboard</a>
+                        <a href="/dashAdm">Dashboard</a>
                     </li>
                     <li><i class='bx bx-chevron-right' ></i></li>
                     <li>
@@ -26,7 +26,7 @@
             </a> --}}
         </div>
 
-        <ul class="box-info">
+        <ul class="box-info" style="width: 55em">
             <li>
                 <i class='bx bxs-time-five' ></i>
                 <span class="text">

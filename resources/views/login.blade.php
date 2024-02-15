@@ -24,36 +24,36 @@
 <body>
     <div class="container">
         <div class="col satu">
-            <h1>Welcome Back!</h1>
-            <p>
-                Selamat datang kembali user! <br />
-                Login kembali untuk berjumpa kembali dengan <br />
-                sesama cinephile!
-            </p>
-        </div>
-        <div class="col dua">
-            <h1 class="title">Login</h1>
+            <h1 class="title">login</h1>
             <form action="">
                 <div class="form-input">
-                    <label for="email">Enter your email</label>
-                    <input type="email" name="email" id="email" class="form-control" required />
+                    <label for="name">Nama</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        required
+                        placeholder="masukan nama terdaftar"    
+                    >
+                    <span class="alert">nama tidak boleh kosong!</span>
                 </div>
-                <div class="form-input">
+                <div class="form-input pw">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" class="form-control" required />
+                    <input 
+                        type="password" 
+                        class="form-control" 
+                        required
+                        placeholder="masukan password terdaftar"
+                    >
+                    <span class="alert">password tidak boleh kosong!</span>
                 </div>
-                <div class="form-input">
-                    <input type="checkbox" name="checkbox" id="checkbox" class="" required />
-                    <label for="checkbox">Show Password</label>
-                </div>
-                <button class="btn-login">Login</button>
-                <div class="help">
-                    <div class="link">
-                        <a href="/forgot-password">Forgot your password?</a>
-                    </div>
-                </div>
+                {{-- <div class="show-pw">
+                    <input type="checkbox" class="form-check-label">
+                    <label for="show" class="show">Lihat password</label>
+                </div> --}}
+                <button type="submit" class="btn-submit">Login</button>
             </form>
         </div>
+        <div class="col dua"></div>
     </div>
 
     <script src="{{asset('js/login.js')}}"></script>

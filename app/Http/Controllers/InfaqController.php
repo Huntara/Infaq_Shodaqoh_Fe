@@ -21,6 +21,12 @@ class InfaqController extends Controller
         return view('dashAdm');
     }
 
+    public function pembayaran()
+    {
+        return view('pembayaran');
+
+    }
+
     public function login()
     {
         return view('login');
@@ -31,16 +37,9 @@ class InfaqController extends Controller
         return view('forgot-password');
     }
 
-    public function pembayaran() {
-        return view('pembayaran');
-    }
-
     public function dashUser() {
         return view('dashUser');
     }
 
-    public function popup() 
-    {
-        return view('popup');
-    } 
 }
+

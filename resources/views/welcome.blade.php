@@ -28,7 +28,7 @@
         <div class="container-navbar">
             <div class="nav-title-nav">
                 <img src="{{ asset('image/icon-web.jpg') }}" width="50" alt="">
-                <a href="#" class="navbar nav-title">Infak <span class="span-nav-title">Wikrama</span></a>
+                <a href="/" class="navbar nav-title">Infak <span class="span-nav-title">Wikrama</span></a>
             </div>
             <div class="nav-menu" id="nav">
                 <div class="link-nav">
@@ -56,7 +56,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sunt <br> delectus veniam sapiente
                 impedit dignissimos!
             </p>
-            <a href="#" class="btn-hero">Mulai berinfak</a>
+            <a href="/login" class="btn-hero">Mulai berinfak</a>
         </div>
     </section>
     {{-- end hero section --}}

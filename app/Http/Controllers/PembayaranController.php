@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pembayaran;
 use Illuminate\Http\Request;
-use App\Models\Payment;
-use RealRashid\SweetAlert\Facades\Alert;
 
-class PaymentController extends Controller
+class PembayaranController extends Controller
 {
+    
+
     public function store(Request $request)
     {
         $request->validate([
@@ -21,9 +22,9 @@ class PaymentController extends Controller
             'done_time' => 'nullable',
         ]);
 
-        $imagePath = $request->file('image')->store('payment');
+        $imagePath = $request->file('image')->store('pembayaran');
 
-        $payment = Payment::create([
+        $pembayaran = Pembayaran::create([
             'user_id' => $request->input('user_id'),            
             'nama_bank' => $request->input('nama_bank'),
             'pemilik_bank' => $request->input('pemilik_bank'),
@@ -34,15 +35,13 @@ class PaymentController extends Controller
             'done_time' => $request->input('done_time'),
         ]);
 
-        Alert::success('Success', 'Sukses Membuat Pembayaran');
-
         return redirect('pembayaran')->with('Success', 'Sukses Membuat Pembayaran');
 
     }
 
     public function data()
     {
-        $payment = Payment::all();
+        $pembayaran = Pembayaran::all();
         return view('riwayat', compact('riwayat'));
     }
 
@@ -59,9 +58,9 @@ class PaymentController extends Controller
             'done_time' => 'nullable',
         ]);
 
-        $payment = Payment::findOrFail($id);
+        $pembayaran = Pembayaran::findOrFail($id);
 
-        $payment->update([
+        $pembayaran->update([
             'user_id' => $request->input('user_id'),            
             'nama_bank' => $request->input('nama_bank'),
             'pemilik_bank' => $request->input('pemilik_bank'),
@@ -71,8 +70,14 @@ class PaymentController extends Controller
             'done_time' => $request->input('done_time'),
         ]);
 
-        Alert::success('Success', 'Sukses Mengubah Pembayaran');
-
         return redirect('pembayaran')->with('Success', 'Sukses Mengubah Pembayaran');
+    }
+
+    public function destroy($id)
+    {
+        //
+        Pembayaran::where('pembayaran_id',$id)->delete();
+
+        return redirect()->route('pembayaran')->with('Success','Sukses Menghapus Pembayaran');
     }
 }

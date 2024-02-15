@@ -55,6 +55,8 @@
 
     <body style="background-color: #eeeeee;">
 
+        <body style="background-color: #eeeeee;">
+
         <div class="card-pembayaran p-3 me-5 shadow d-flex justify-content-center flex-column rounded-3 overflow-hidden"
             style="background-color: #ffffff">
             <h6 class="title-card fs-4 fw-semibold text-center mb-5">Pembayaran</h6>
@@ -80,8 +82,6 @@
                             <i class="bi bi-wallet fw-bold"></i>
                         </label>
                     </div>
-
-
 
                     <h5 class="title-content mt-5">Lengkapi Data Penginfak</h5>
                     <div class="form-input mb-3 data mt-4">
