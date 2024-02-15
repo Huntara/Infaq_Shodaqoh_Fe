@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('payment', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('users_id');
-            $table->foreign('users_id')->references('id')->on('users');
+            $table->bigInteger('user_id');
             $table->string("nama_bank")->nullable();
             $table->string("pemilik_bank")->nullable();
-            $table->string("nominal");
-            $table->string('bukti_pembayaran')->nullable();
+            $table->integer("nominal");
+            $table->integer("no_telpon");
+            $table->string('image')->nullable();
             $table->enum('status', ['Proses', 'Selesai', 'Tolak'])->default('Proses');
             $table->date('done_time')->nullable();
             $table->timestamps();

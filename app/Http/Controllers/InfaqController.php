@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Payment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class InfaqController extends Controller
 {
@@ -16,15 +19,11 @@ class InfaqController extends Controller
         return view('Tagihan');
     }
 
-    public function payment()
+    public function dashAdm()
     {
-        return view('Payment');
+        return view('dashAdm');
     }
 
-    public function dashboard()
-    {
-        return view('Dashboard');
-    }
 
     public function forgotpassword()
     {
@@ -61,4 +60,8 @@ class InfaqController extends Controller
         }
     }
 
+    public function dashUser() {
+        return view('dashUser');
+    }
+    
 }

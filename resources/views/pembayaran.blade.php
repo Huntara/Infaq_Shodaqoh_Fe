@@ -1,70 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout.layout')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pembayaran | Page</title>
+@section('title', 'Pembayaran')
 
-    {{-- icon web --}}
-    <link rel="icon web" type="icon" href="{{ asset('image/icon-web.jpg') }}">
-
-    {{-- pembayaran css --}}
-    <link rel="stylesheet" href="{{ asset('css/pembayaran.css') }}">
-
-    {{-- bootstrap link --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    {{-- link icon bootstrap --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-</head>
-
-<body style="background-color: #e9e9e9;">
-
-    <div class="card-pembayaran bg-light-subtle p-3 shadow d-flex justify-content-center flex-column rounded-3">
-        <h6 class="title-card fs-4 fw-semibold text-center mb-5">Pembayaran</h6>
-        <div class="main-content px-5">
-            <form action="" class="my-3">
-                <h5 class="title-content">Tunaikan Infak Disini</h5>
-                <div class="my-4 form-input">
-                    <input 
-                        type="text" 
-                        class="form-control px-5 shadow py-3"
-                        placeholder="Isi Nominal Donasi (minimal 10.000)"
-                        required
-                        oninput="validateAndFormat(this)"
-                    >
-                    <label 
-                        for="nominal" 
-                        class="fw-bold"
-                    >
-                        Rp
-                    </label>
-                </div>
-                <div class="mb-4 form-input">
-                    <select 
-                        class="form-select px-5 shadow py-3" 
-                        aria-label="Default select example" 
-                        id="payment-method"
-                        required
-                    >
-                        <option value="1" data-icon>Dana</option>
-                        <option value="2">Gopay</option>
-                        <option value="3">Qris</option>
-                        <option value="4">Shopee Pay</option>
-                        <option value="5">Ovo</option>
-                        <option value="6">Visa</option>
-                    </select>
-                    <label 
-                        for="nominal" 
-                        class="fw-bold"
-                    >
-                        <i class="bi bi-wallet fw-bold"></i>
-                    </label>
-                </div>
-
+@section('content')
 
                 <h5 class="title-content mt-3">Lengkapi Data Penginfak</h5>
                 <div class="content d-flex align-items-center gap-3 flex-wrap mb-3">
@@ -76,7 +14,7 @@
                             required
                         >
                     </div>
-                    <div class="checkbox">
+                    {{-- <div class="checkbox">
                         <label class="contain">
                             <input type="checkbox">
                             <svg 
@@ -92,7 +30,7 @@
                             </svg>
                         </label>
                         <p class="ps-5 pr">Infak Sebagai Hamba Allah</p>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="no-hp mb-3">
                     <input 
@@ -114,13 +52,60 @@
                 </div>
             </form>
         </div>
+=======
+    <body style="background-color: #eeeeee;">
 
-    {{-- pembayaran js --}}
-    <script src="{{asset('js/pembayaran.js')}}"></script>
+        <div class="card-pembayaran p-3 me-5 shadow d-flex justify-content-center flex-column rounded-3 overflow-hidden"
+            style="background-color: #ffffff">
+            <h6 class="title-card fs-4 fw-semibold text-center mb-5">Pembayaran</h6>
+            <div class="main-content px-5">
+                <form action="" class="my-3">
+                    <h5 class="title-content">Tunaikan Infak Disini</h5>
+                    <div class="my-4 form-input">
+                        <input type="text" class="form-control px-5 shadow py-3 border"
+                            placeholder="Isi Nominal Donasi (minimal 10.000)" required oninput="validateAndFormat(this)">
+                        <label for="nominal" class="fw-bold label">
+                            Rp
+                        </label>
+                    </div>
+                    <div class="mb-4 form-input">
+                        <select class="form-select px-5 shadow py-3" aria-label="Default select example" id="payment-method"
+                            required>
+                            <option value="1">BCA</option>
+                            <option value="2">Mandiri</option>
+                            <option value="3">Syariah</option>
+                            <option value="4">BNI</option>
+                        </select>
+                        <label for="nominal" class="fw-bold label">
+                            <i class="bi bi-wallet fw-bold"></i>
+                        </label>
+                    </div>
+>>>>>>> 87638e42a4016d9398e9358bf2bdbe00600c9ab5
 
-    {{-- bootstrap script --}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-</body>
+                    <h5 class="title-content mt-5">Lengkapi Data Penginfak</h5>
+                    <div class="form-input mb-3 data mt-4">
+                        <label for="" class="fs-5">Pemilik Bank</label>
+                        <input type="text" class="form-control shadow py-3 border nama-donatur"
+                            placeholder="Masukan Nama Donatur" required>
+                    </div>
+                    <div class="no-hp my-3">
+                        <input type="number" class="form-control shadow py-3 border" placeholder="Masukan Nomer telpon Anda"
+                            required>
+                    </div>
 
-</html>
+                    <div class="mb-3">
+                        <label for="formFileLg" class="form-label">Input Bukti Pembayaran</label>
+                        <input class="form-control form-control-lg border" id="formFileLg" type="file">
+                    </div>
+
+                    <div class="d-flex justify-content-end align-items-center pt-5">
+                        <button type="submit" class="btn btn-secondary ml-auto px-5 py-2">Submit</button>
+                    </div>
+                </form>
+            </div>
+    </body>
+
+
+
+@endsection

@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
 
-* {
+*, *:after, *:before {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	text-decoration: none;
 }
 
-a {
+a, a::before, a::after {
 	text-decoration: none;
 }
 
@@ -14,10 +15,13 @@ li {
 	list-style: none;
 }
 
+span, span::after, span::before {
+	text-decoration: none;
+}
+
 :root {
 	--poppins: 'Poppins', sans-serif;
 	--lato: 'Lato', sans-serif;
-
 	--light: #F9F9F9;
 	--blue: #3C91E6;
 	--light-blue: #CFE8FF;
@@ -33,6 +37,7 @@ li {
 
 html {
 	overflow-x: hidden;
+	width: 100%;
 }
 
 body.dark {
@@ -44,10 +49,8 @@ body.dark {
 body {
 	background: var(--grey);
 	overflow-x: hidden;
+	width: 100%;
 }
-
-
-
 
 
 /* SIDEBAR */
@@ -160,15 +163,15 @@ body {
 /* SIDEBAR */
 
 
-
-
-
 /* CONTENT */
 #content {
 	position: relative;
-	width: calc(100% - 280px);
+	width: 100%;
 	left: 280px;
 	transition: .3s ease;
+	width: 100%;
+	height: 100vh;
+	padding-top: 100px;
 }
 #sidebar.hide ~ #content {
 	width: calc(100% - 60px);
@@ -182,16 +185,19 @@ body {
 #content nav {
 	height: 56px;
 	background: var(--light);
-	padding: 0 24px;
+	padding: 10px 24px;
 	display: flex;
 	align-items: center;
 	grid-gap: 24px;
 	font-family: var(--lato);
-	position: sticky;
+	position: fixed;
 	top: 0;
-	left: 0;
+	left: 280px;
+	width: 100%;
 	z-index: 1000;
+	transition: .3s ease;
 }
+
 #content nav::before {
 	content: '';
 	position: absolute;
@@ -533,6 +539,10 @@ body {
 
 	#content {
 		width: calc(100% - 60px);
+		left: 200px;
+	}
+
+	#content nav {
 		left: 200px;
 	}
 

@@ -37,7 +37,7 @@ class AuthController extends Controller
 
             if (auth()->user()->role_id === 1) {
                 // jika user superadmin
-                return redirect()->intended('dashboard');
+                return redirect()->intended('dashAdm');
             } else {
                 // jika user 
                 return redirect()->intended('dashUser');

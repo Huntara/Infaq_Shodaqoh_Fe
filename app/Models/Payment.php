@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Payment extends Model
 {
@@ -19,10 +18,10 @@ class Payment extends Model
         'nominal',
         'bukti_pembayaran',
         'status',
-        'done_time',
+        'user_id'
     ];
 
-    public function users(): HasOne{
-        return $this->hasOne(User::class, 'id', 'users_id');
+    public function user(){
+        return $this->belongsTo(User::class,  'user_id', 'nominal');
     }
 }

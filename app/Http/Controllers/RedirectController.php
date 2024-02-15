@@ -8,7 +8,7 @@ class RedirectController extends Controller
 {
     public function cek() {
         if (auth()->user()->role_id === 1) {
-            return redirect('dashboard');
+            return redirect('dashAdm');
         } else {
             return redirect('dashUser');
         }

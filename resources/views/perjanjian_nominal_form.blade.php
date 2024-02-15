@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layout.layout')
 
 @section('title', 'perjanjian')
 
@@ -20,13 +20,13 @@
     async function showIPAddressPopup() {
         try {
             // Mendapatkan IP address pengguna
-            const inputValue = await fetchIPAddress();
+            const inputValue = '';
 
             // Menampilkan popup dengan input untuk perjanjian infak
             const { value: nominal } = await Swal.fire({
                 title: "Perjanjian Infak",
                 input: "text",
-                inputLabel: "Nominal yang anda masukan saat ini berlaku untuk setiap kali anda akan melakukan pembayaran kedepannya, jika anda ingin melakukan perubahan nominal infak, anda dapat meminta admin untuk melakukan persetujuan.",
+                inputLabel: "Nominal ini untuk tagihan anda setiap bulanya",
                 inputValue,
                 showCancelButton: true,
                 inputValidator: (value) => {

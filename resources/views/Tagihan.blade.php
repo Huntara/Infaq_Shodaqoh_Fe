@@ -19,10 +19,6 @@
                     </li>
                 </ul>
             </div>
-            <a href="#" class="btn-download">
-                <i class='bx bxs-cloud-download' ></i>
-                <span class="text">Download PDF</span>
-            </a>
         </div>
 
         {{-- <ul class="box-info">
@@ -55,24 +51,23 @@
                 <div class="head">
                     <h3>Tagihan</h3>
                     <i class='bx bx-search' ></i>
-                    <i class='bx bx-filter' ></i>
                 </div>
                 <table>
                     <thead>
                         <tr>
-                            <th>User</th>
-                            <th>Date Order</th>
-                            <th>Status</th>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Tanggal</th>
                         </tr>
                     </thead>
                 </table>
             </div>
-            <div class="todo">
+            {{-- <div class="todo">
                 <div class="head">
                     <h3>Todos</h3>
                     <i class='bx bx-plus' ></i>
                     <i class='bx bx-filter' ></i>
-                </div>
+                </div> --}}
                 {{-- <ul class="todo-list">
                     <li class="completed">
                         <p>Todo List</p>

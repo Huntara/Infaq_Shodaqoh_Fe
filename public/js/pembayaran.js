@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             button.classList.remove('btn-success');
             button.classList.add('btn-secondary');
-            // button.disabled = true;
+            button.disabled = true;
         }
     });
 });

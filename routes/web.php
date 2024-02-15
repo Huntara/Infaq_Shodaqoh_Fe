@@ -5,6 +5,9 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\InfaqController;
 use App\Http\Controllers\RedirectController;
 
+use App\Models\Payment;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +33,8 @@ Route::group(['middleware' => 'guest'], function() {
 Route::group(['middleware' => ['auth', 'checkrole:1,2']], function() {
     Route::get('/logout', [AuthController::class, 'logout']);
     Route::get('/redirect', [RedirectController::class, 'cek']);
+    Route::get('forgot-password', [InfaqController::class, 'forgotpassword']);
+
 
     Route::get('riwayat', [InfaqController::class, 'riwayat']);
     Route::get('tagihan', [InfaqController::class, 'tagihan']);
@@ -40,16 +45,13 @@ Route::group(['middleware' => ['auth', 'checkrole:1,2']], function() {
 
 // untuk superadmin
 Route::group(['middleware' => ['auth', 'checkrole:1']], function() {
-    Route::get('dashboard', [InfaqController::class, 'dashboard']);
+    Route::get('dashAdm', [InfaqController::class, 'dashAdm']);
 });
 
 // untuk pegawai
 Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
-    Route::get('/perjanjian', [UserController::class, 'perjanjian']);
-    Route::post('/perjanjian', [UserController::class, 'nominal_form']);
+    Route::get('dashUser', [InfaqController::class,'dashUser']);
+    Route::get('/perjanjian', [InfaqController::class, 'perjanjian']);
+    Route::post('/perjanjian', [InfaqController::class, 'nominal_form']);
 
 });
-
-
-Route::get('forgot-password', [InfaqController::class, 'forgotpassword']);
-
