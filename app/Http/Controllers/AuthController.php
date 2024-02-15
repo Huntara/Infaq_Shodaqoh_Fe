@@ -28,7 +28,7 @@ class AuthController extends Controller
 
             // Cek apakah perjanjian nominal infak telah diisi
             $user = auth()->user();
-            $infakNominal = $user->Payment->nominal ?? null;
+            $infakNominal = $user->Pembayaran->nominal ?? null;
             if ($infakNominal === null) {
                 // Jika belum diisi, tampilkan pop-up untuk mengisi
                 return redirect()->intended('/perjanjian');
@@ -53,7 +53,7 @@ class AuthController extends Controller
         auth()->logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/login');
+        return redirect('login');
     }
 
 }

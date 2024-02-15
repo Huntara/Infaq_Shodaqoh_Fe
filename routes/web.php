@@ -6,8 +6,6 @@ use App\Http\Controllers\InfaqController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\PembayaranController;
 
-use App\Models\Pembayaran;
-
 
 
 /*
@@ -24,11 +22,6 @@ use App\Models\Pembayaran;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('pembayaran', [PembayaranController::class, 'pembayaran']);
-Route::get('pembayaran/create', [PembayaranController::class, 'store']);
-Route::get('pembayaran/{id}/edit', [PembayaranController::class, 'edit']);
-Route::get('pembayaran/{id}/update', [PembayaranController::class, 'update']);
-Route::get('pembayaran/{id}/delete', [PembayaranController::class, 'delete']);
 
 Route::group(['middleware' => 'guest'], function() {
     Route::get('login', [AuthController::class, 'login'])->name('login');
@@ -59,5 +52,10 @@ Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
     Route::get('dashUser', [InfaqController::class,'dashUser']);
     Route::get('/perjanjian', [InfaqController::class, 'perjanjian']);
     Route::post('/perjanjian', [InfaqController::class, 'nominal_form']);
+    Route::get('pembayaran', [PembayaranController::class, 'pembayaran']);
+    Route::get('pembayaran/create', [PembayaranController::class, 'store']);
+    Route::get('pembayaran/{id}/edit', [PembayaranController::class, 'edit']);
+    Route::get('pembayaran/{id}/update', [PembayaranController::class, 'update']);
+    Route::get('pembayaran/{id}/delete', [PembayaranController::class, 'delete']);
 
 });

@@ -34,7 +34,7 @@
                 <div class="link-nav">
                     <a href="#home" class="nav-item">Home</a>
                     <a href="#about" class="nav-item">Tentang Infak</a>
-                    <a href="/login" class="btn-login">Sign in</a>
+                    <a href="login" class="btn-login">Sign in</a>
                 </div>
             </div>
             <div class="hamburger">

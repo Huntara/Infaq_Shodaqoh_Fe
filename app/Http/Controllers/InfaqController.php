@@ -19,15 +19,17 @@ class InfaqController extends Controller
         return view('Tagihan');
     }
 
-    public function dashAdmin()
+    public function dashAdm()
     {
+
         return view('dashAdmin');
     }
-
+    
 
     public function pembayaran()
     {
         return view('pembayaran');
+
     }
 
 
@@ -49,20 +51,18 @@ class InfaqController extends Controller
             ]);
     
             // Lakukan penambahan data ke dalam tabel menggunakan metode create
-            $Pembayaran = Pembayaran::create([
+            $payment = Pembayaran::create([
                 'nominal' => $request->nominal, // Ambil nilai nominal dari permintaan
                 'user_id' => Auth::id(), // Ambil ID pengguna yang sedang login
             ]);
     
             // Jika berhasil, kembalikan respons JSON
-            return response()->json(['success' => true, 'Pembayaran' => $Pembayaran]);
+            return response()->json(['success' => true, 'payment' => $payment]);
         } catch (\Exception $e) {
             // Jika terjadi kesalahan, kembalikan respons JSON dengan pesan kesalahan
             return response()->json(['success' => false, 'message' => $e->getMessage()], 500);
         }
     }
-
-
 
     public function dashUser()
     {
@@ -71,3 +71,4 @@ class InfaqController extends Controller
 
 
 }
+

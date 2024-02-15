@@ -113,7 +113,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/tagihan">
                     <i class='bx bxs-book'></i>
                     <span class="text">Tagihan</span>
                 </a>
@@ -122,14 +122,12 @@
         <ul class="side-menu">
             <li>
                 <a href="/logout" class="logout">
-                <a href="/" class="logout">
                     <i class='bx bxs-log-out-circle'></i>
                     <span class="text">Logout</span>
                 </a>
             </li>
         </ul>
     </section>
-    <!-- SIDEBAR -->
 
     <!-- CONTENT -->
     <section id="content">

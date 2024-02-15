@@ -26,7 +26,7 @@
             </a> --}}
         </div>
 
-        <ul class="box-info">
+        <ul class="box-info" style="width: 55em">
             <li>
                 <i class='bx bxs-time-five' ></i>
                 <span class="text">

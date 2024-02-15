@@ -62,6 +62,7 @@
                             <th>No</th>
                             <th>Nama</th>
                             <th>Tanggal</th>
+                            <th>Bulan</th>
                             <th>Status</th>
                         </tr>
                     </thead>
