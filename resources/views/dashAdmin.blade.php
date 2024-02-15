@@ -12,7 +12,7 @@
                 <h3>Dashboard</h3>
                 <ul class="breadcrumb">
                     <li>
-                        <a href="#">Dashboard</a>
+                        <a href="/dashAdm">Dashboard</a>
                     </li>
                     <li><i class='bx bx-chevron-right' ></i></li>
                     <li>

@@ -48,6 +48,6 @@ class User extends Authenticatable
 
     public function payment()
     {
-        return $this->hasOne(Payment::class);
+        return $this->hasOne(Pembayaran::class);
     }
 }

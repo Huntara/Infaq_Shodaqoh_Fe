@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Payment;
+use App\Models\Pembayaran;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,19 +19,21 @@ class InfaqController extends Controller
         return view('Tagihan');
     }
 
-    public function dashAdm()
+    public function dashAdmin()
     {
-        return view('dashAdm');
+        return view('dashAdmin');
+    }
+
+
+    public function pembayaran()
+    {
+        return view('pembayaran');
     }
 
 
     public function forgotpassword()
     {
         return view('forgot-password');
-    }
-
-    public function pembayaran() {
-        return view('pembayaran');
     }
 
     public function perjanjian() {
@@ -47,21 +49,25 @@ class InfaqController extends Controller
             ]);
     
             // Lakukan penambahan data ke dalam tabel menggunakan metode create
-            $payment = Payment::create([
+            $Pembayaran = Pembayaran::create([
                 'nominal' => $request->nominal, // Ambil nilai nominal dari permintaan
                 'user_id' => Auth::id(), // Ambil ID pengguna yang sedang login
             ]);
     
             // Jika berhasil, kembalikan respons JSON
-            return response()->json(['success' => true, 'payment' => $payment]);
+            return response()->json(['success' => true, 'Pembayaran' => $Pembayaran]);
         } catch (\Exception $e) {
             // Jika terjadi kesalahan, kembalikan respons JSON dengan pesan kesalahan
             return response()->json(['success' => false, 'message' => $e->getMessage()], 500);
         }
     }
 
-    public function dashUser() {
+
+
+    public function dashUser()
+    {
         return view('dashUser');
     }
-    
+
+
 }
