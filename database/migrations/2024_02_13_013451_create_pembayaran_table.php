@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string("nama_bank")->nullable();
             $table->string("pemilik_bank")->nullable();
             $table->integer("nominal");
-            $table->integer("no_telpon");
+            $table->bigInteger("no_telpon");
             $table->string('image')->nullable();
             $table->enum('status', ['Proses', 'Selesai', 'Tolak'])->default('Proses');
             $table->date('done_time')->nullable();

@@ -373,7 +373,7 @@ body {
 }
 #content main .box-info li {
 	padding: 24px;
-	background: var(--dark-grey);
+	background: #fff;
 	border-radius: 20px;
 	display: flex;
 	align-items: center;

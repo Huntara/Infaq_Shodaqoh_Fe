@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\User;
 use App\Models\Role;
 
@@ -10,12 +11,14 @@ class AuthController extends Controller
 {
     public function login()
     {
-        return view('login');
+        $users = User::where('role_id', '1')->count();
+        return view('login', compact('users'));
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         // validasi
-        
+
         $credentials = $request->validate([
             'name' => 'required',
             'password' => 'required'
@@ -49,11 +52,11 @@ class AuthController extends Controller
         return back()->with('error', 'name atau password salah');
     }
 
-    public function logout(Request $request) {
+    public function logout(Request $request)
+    {
         auth()->logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('login');
     }
-
 }

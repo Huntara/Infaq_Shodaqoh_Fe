@@ -16,7 +16,8 @@ class Pembayaran extends Model
         'users_id',
         'pemilik_bank',
         'nominal',
-        'bukti_pembayaran',
+        'no_telpon',
+        'image',
         'status',
         'user_id'
     ];

@@ -41,6 +41,13 @@
                     <p>Visitors</p>
                 </span>
             </li>
+            <li>
+                <i class='bx bxs-group' ></i>
+                <span class="text">
+                    <h3>Visitor</h3>
+                    <p>{{ $users }}</p>
+                </span>
+            </li>
             {{-- <li>
                 <i class='bx bxs-dollar-circle' ></i>
                 <span class="text">
